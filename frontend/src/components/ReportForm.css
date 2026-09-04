@@ -1,0 +1,171 @@
+/* ========================================
+   REPORT FORM STYLES — Kinukshan
+   ======================================== */
+
+.report-form {
+  background: #ffffff;
+  border: 1px solid #e4e9e6;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.report-form__heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+/* Messages */
+.report-form__message {
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.report-form__message--success {
+  background: #edf7ed;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.report-form__message--error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Form Groups */
+.report-form__group {
+  margin-bottom: 1.4rem;
+}
+
+.report-form__label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+.report-form__input,
+.report-form__select,
+.report-form__textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: #fafcfb;
+  border: 1.5px solid #d0d8d3;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-form__input:focus,
+.report-form__select:focus,
+.report-form__textarea:focus {
+  border-color: #1a7a5a;
+  box-shadow: 0 0 0 3px rgba(26, 122, 90, 0.1);
+  background: #ffffff;
+}
+
+.report-form__input--error {
+  border-color: #dc2626;
+}
+
+.report-form__input--error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.report-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.report-form__select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+}
+
+/* Field Error */
+.report-form__field-error {
+  display: block;
+  color: #dc2626;
+  font-size: 0.82rem;
+  margin-top: 0.3rem;
+  padding-left: 0.1rem;
+}
+
+/* Submit Button */
+.report-form__submit {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0d4f3c, #1a7a5a);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.report-form__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 79, 60, 0.3);
+}
+
+.report-form__submit:focus-visible {
+  outline: 3px solid #2e9e6e;
+  outline-offset: 2px;
+}
+
+.report-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .report-form {
+    padding: 2rem 1.5rem;
+  }
+
+  .report-form__heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .report-form {
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+  }
+
+  .report-form__input,
+  .report-form__select,
+  .report-form__textarea {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
