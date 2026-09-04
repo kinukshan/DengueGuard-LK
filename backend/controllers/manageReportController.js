@@ -93,7 +93,6 @@ exports.createReport = async (req, res) => {
     });
   }
 };
-
 exports.updateReport = async (req, res) => {
   try {
     const { id } = req.params;
