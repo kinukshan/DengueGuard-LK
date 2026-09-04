@@ -1,8 +1,6 @@
 const Report = require('../models/Report');
 
-
 // GET /api/dashboard/stats
-//testing
 exports.getDashboardStats = async (req, res) => {
   try {
     const totalReports = await Report.countDocuments();

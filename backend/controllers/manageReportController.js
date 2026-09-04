@@ -39,6 +39,60 @@ function validateReportUpdate(data) {
   return errors;
 }
 
+exports.createReport = async (req, res) => {
+  try {
+    const { reporterName, district, area, locationType, description, riskLevel } = req.body;
+
+    // Check all required fields are present
+    if (!reporterName || !district || !area || !locationType || !description || !riskLevel) {
+      return res.status(400).json({
+        success: false,
+        message: 'All fields are required.',
+      });
+    }
+
+    const validationErrors = validateReportUpdate({
+      reporterName,
+      area,
+      description,
+      riskLevel,
+    });
+
+    if (validationErrors.length > 0) {
+      return res.status(400).json({
+        success: false,
+        message: validationErrors[0],
+      });
+    }
+
+    const newReport = await Report.create({
+      reporterName: String(reporterName).trim(),
+      district: String(district).trim(),
+      area: String(area).trim(),
+      locationType: String(locationType).trim(),
+      description: String(description).trim(),
+      riskLevel,
+    });
+
+    return res.status(201).json({
+      success: true,
+      message: 'Report created successfully',
+      data: newReport,
+    });
+  } catch (error) {
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid report data provided.',
+      });
+    }
+
+    return res.status(500).json({
+      success: false,
+      message: 'Unable to create the report. Please try again.',
+    });
+  }
+};
 exports.updateReport = async (req, res) => {
   try {
     const { id } = req.params;
