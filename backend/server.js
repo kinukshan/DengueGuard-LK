@@ -1,3 +1,8 @@
+const dns = require('dns');
+try {
+  dns.setServers(['8.8.8.8', '8.8.4.4', '1.1.1.1']);
+} catch (e) {}
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -22,6 +27,15 @@ connectDB();
 app.get('/', (req, res) => {
   res.json({ message: 'DengueGuard LK API is running' });
 });
+
+// Route mounting
+const readReportRoutes = require('./routes/readReportRoutes');
+const manageReportRoutes = require('./routes/manageReportRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+
+app.use('/api/reports', readReportRoutes);
+app.use('/api/reports', manageReportRoutes);
+app.use('/api/dashboard/stats', dashboardRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
