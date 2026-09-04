@@ -1,0 +1,64 @@
+/* ========================================
+   REPORT RISK PAGE STYLES — Kinukshan
+   ======================================== */
+
+.report-risk__header {
+  background: linear-gradient(135deg, #0d4f3c 0%, #1a7a5a 50%, #2e9e6e 100%);
+  color: #ffffff;
+  padding: 3.5rem 2rem 3rem;
+  text-align: center;
+}
+
+.report-risk__header-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.report-risk__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.report-risk__description {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.report-risk__form-section {
+  padding: 3rem 2rem 4rem;
+  background: #f8faf9;
+  min-height: 60vh;
+}
+
+.report-risk__form-container {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-risk__header {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .report-risk__title {
+    font-size: 1.6rem;
+  }
+
+  .report-risk__form-section {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .report-risk__title {
+    font-size: 1.4rem;
+  }
+
+  .report-risk__description {
+    font-size: 0.95rem;
+  }
+}

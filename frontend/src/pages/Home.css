@@ -1,0 +1,359 @@
+/* ========================================
+   HOME PAGE STYLES — Kinukshan
+   ======================================== */
+
+/* Hero Section */
+.home-hero {
+  background: linear-gradient(135deg, #0d4f3c 0%, #1a7a5a 50%, #2e9e6e 100%);
+  color: #ffffff;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  animation: heroShimmer 8s ease-in-out infinite;
+}
+
+@keyframes heroShimmer {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5%, 3%); }
+}
+
+.home-hero__content {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero__badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.home-hero__title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+
+.home-hero__subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.home-hero__tagline {
+  font-size: 1rem;
+  opacity: 0.75;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Problem Section */
+.home-problem {
+  padding: 4rem 2rem;
+  background: #f8faf9;
+}
+
+.home-problem__container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.home-problem__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.home-problem__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.home-problem__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-problem__text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.home-problem__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.home-problem__stat-card {
+  background: #ffffff;
+  border: 1px solid #e8ece9;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-problem__stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.home-problem__stat-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.home-problem__stat-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.home-problem__stat-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* How It Works Section */
+.home-how {
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.home-how__container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.home-how__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.home-how__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.home-how__step {
+  flex: 1;
+  text-align: center;
+  max-width: 220px;
+}
+
+.home-how__step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d4f3c, #2e9e6e);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.home-how__step h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.home-how__step p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.home-how__step-arrow {
+  font-size: 1.5rem;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+/* Actions Section */
+.home-actions {
+  padding: 4rem 2rem;
+  background: #f0f6f3;
+}
+
+.home-actions__container {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-actions__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.6rem;
+}
+
+.home-actions__description {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.home-actions__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.home-actions__btn {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.home-actions__btn:focus-visible {
+  outline: 3px solid #2e9e6e;
+  outline-offset: 2px;
+}
+
+.home-actions__btn--primary {
+  background: linear-gradient(135deg, #0d4f3c, #1a7a5a);
+  color: #ffffff;
+}
+
+.home-actions__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 79, 60, 0.3);
+}
+
+.home-actions__btn--secondary {
+  background: #ffffff;
+  color: #1a7a5a;
+  border: 2px solid #1a7a5a;
+}
+
+.home-actions__btn--secondary:hover {
+  background: #1a7a5a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 79, 60, 0.15);
+}
+
+/* Footer */
+.home-footer {
+  background: #1a1a1a;
+  color: #999;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .home-hero__title {
+    font-size: 2.2rem;
+  }
+
+  .home-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .home-problem__stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home-how__steps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-how__step-arrow {
+    transform: rotate(90deg);
+  }
+
+  .home-how__step {
+    max-width: 100%;
+  }
+
+  .home-actions__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-actions__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .home-hero__badge {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.9rem;
+  }
+
+  .home-problem__title,
+  .home-how__title,
+  .home-actions__title {
+    font-size: 1.5rem;
+  }
+}
